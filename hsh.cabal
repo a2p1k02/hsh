@@ -1,0 +1,30 @@
+cabal-version:      3.0
+name:               hsh
+version:            0.1.0.0
+-- synopsis:
+-- description:
+license:            MIT
+license-file:       LICENSE
+author:             a2p1k02
+maintainer:         a2p1k02@hotmail.com
+-- copyright:
+category:           System
+build-type:         Simple
+extra-doc-files:    CHANGELOG.md
+-- extra-source-files:
+
+common warnings
+    ghc-options: -Wall
+
+executable hsh
+    import:           warnings
+    main-is:          Main.hs
+    -- other-modules:
+    -- other-extensions:
+    build-depends:    base ^>=4.18.3.0, 
+                      directory,
+                      containers,
+                      process >=1.6 && <1.7,
+                      split >=0.2 && <0.3
+    hs-source-dirs:   app
+    default-language: Haskell2010
